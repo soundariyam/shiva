@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boxes with Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="box line-around-text" style="border:none">YAY! It's BOGO</h1>
+    <div class="box" id="box1">
+        <h3 class="unit-label">
+            <input type="radio" class="unit-text" name="quant" onclick="toggleBox('box1')" />&nbsp;&nbsp;1 Unit
+            <span class="discount-badge">10% off</span>  <!-- 10% off label -->
+            <span class="discounted-price">$8 USD</span> <!-- Discounted price -->  
+        </h3>
+        <p class="unit-text1">Standard Price     <span class="original-price">$10 USD</span> <!-- Canceled price --></p>
+        
+        <div class="options" id="options-box1">
+            <div class="dropdown">
+                <h3>#1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h3>#2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="box" id="box2">
+        
+        <h3 class="unit-label">
+            <input type="radio" class="unit-text" name="quant" onclick="toggleBox('box2')" />&nbsp;&nbsp;2 Unit
+            <span class="discount-badge">20% off</span>  <!-- 20% off label -->
+            <span class="discounted-price">$18 USD</span> <!-- Discounted price -->  
+        </h3>
+        <p class="unit-text1">Standard Price     <span class="original-price">$24 USD</span> <!-- Canceled price --></p>
+    
+        <div class="options" id="options-box1">
+            <div class="most-popular">Most Popular</div>
+            <div class="dropdown">
+                <h3>#1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h3>#2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="box" id="box3" >
+        <h3 class="unit-label">
+            <input type="radio" class="unit-text" name="quant" onclick="toggleBox('box3')" />&nbsp;&nbsp;3 Unit
+            <span class="discount-badge">30% off</span>  <!-- 10% off label -->
+            <span class="discounted-price">$24 USD</span> <!-- Discounted price -->  
+        </h3>
+        <p class="unit-text1">Standard Price     <span class="original-price">$24 USD</span> <!-- Canceled price --></p>
+       
+         <!-- Options will be hidden initially -->
+         <div class="options" id="options-box1">
+            <div class="dropdown">
+                <h3>#1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h3>#2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="select-container">
+                   <b>Color:</b> <select id="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                  <b> Size:</b>    <select id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="box4">
+        <h3 class="text">Free Delivery</h3>
+        <span class="total-price">Total: $24 USD</span> <!-- Discounted price -->  
+    </div>
+    <div class="box5">
+       <button class="but1"> <i class="fas fa-plus plus-icon"></i>&nbsp; ADD TO CART</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.box4{
+    display:flex;
+    width: 500px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+    justify-content:space-between;
+}
+
+/* Box styling */
+.box {
+    width: 500px;
+    padding: 25px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+    position: relative; /* Added to enable absolute positioning of the label inside the box */
+}
+
+/* Styling for the highlighted box */
+.box.highlighted {
+    border: 2px solid #FF6B82;  /* Gold border for the highlighted box */
+    background-color: #FF6B82;   /* Light background color for emphasis */
+}
+
+/* Most Popular label styling */
+.box .most-popular {
+    position: absolute;  /* Positioning the label absolutely within the box */
+    top: 10px;           /* Distance from the top of the box */
+    right: 10px;         /* Distance from the right of the box */
+    background-color: #FF6B82;  /* Gold background */
+    color: #000;         /* Text color */
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 1;          /* Ensures it sits on top of other elements in the box */
+}
+
+/* Hover effect on the box */
+.box:hover {
+    border-color: #007bff;
+}
+.options {
+    display: none;
+    margin-top: 10px;
+}
+
+.box.expanded .options {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ddd;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.line-around-text {
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    color: #FF6B82;
+    font-weight:600;
+}
+
+.line-around-text::before,
+.line-around-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px; /* Thickness of the line */
+    background-color: #C8C8C8; /* Color of the line */
+    width: 25%; /* Controls the length of the line on either side of the text */
+}
+
+.line-around-text::before {
+    left: 0; /* Line starts from the left */
+}
+
+.line-around-text::after {
+    right: 0; /* Line ends at the right */
+}
+
+
+.unit-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Space between radio and text */
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.unit-text {
+    margin-left: 4px; /* Space between radio and text */
+}
+
+.unit-text1 {
+    display:flex;
+    margin-left: 35px; /* Space between radio and text */
+    margin-top: 10px; /* Space from the radio button */
+}
+
+.discount-badge {
+    background-color: #FF6B82;
+    color: white; /* White text */
+    font-size: 1rem; /* Smaller font size */
+    padding: 5px 7px; /* Add some padding */
+    margin-left: 10px; /* Space between "1 Unit" and the badge */
+    display: inline-block; /* Make it inline with the text */
+}
+
+.original-price {
+    text-decoration: line-through; /* Strikethrough the original price */
+    color: gray; /* Gray color for the canceled price */
+    font-size: 1rem; /* Regular font size */
+    margin-left: 250px; /* Space between the original price and the discounted price */
+}
+
+.discounted-price {
+    color: #000;
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Make the discounted price bold */
+    margin-left: 230px; /* Add some space between the standard price and discounted price */
+}
+.style{
+    width:100%;
+}
+.text{
+    color: #FF6B82;
+    text-align:left;
+    display:flex;
+}
+.total-price{
+    display:flex;
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Make the discounted price bold */
+    margin-left: 160px; /* Add some space between the standard price and discounted price */
+    margin-top:20px;
+}
+.box5{
+    text-align:center;
+    width:500px;
+    padding-top:20px;
+}
+.but1{
+    background-color:#FF6B82;
+    color:#fff;
+    font-weight:bold;
+    width:100%;
+    height:50px;
+    font-size:16px;
+   
+}
+.options {
+    display: none;  /* Hide the options initially */
+    gap: 20px;
+}
+
+.options.show {
+    display: flex;  /* Show options when "show" class is added */
+    justify-content: space-between;
+}
+
+/* Flex container for the dropdown to align color and size side by side */
+.dropdown {
+    display: flex;
+    justify-content: space-between;  /* Space between color and size containers */
+    width: 100%;  /* Full width */
+}
+
+/* Each select container takes equal space and aligns side by side */
+.select-container {
+    
+    margin-right: 10px;  /* Space between color and size */
+}
+.select-container select{
+    width: 200px; /* Fixed width for uniformity */
+}
+/* Remove extra margin from the last container */
+.select-container:last-child {
+    margin-right: 0;
+}
+
+/* Style the headings above the dropdown */
+h3 {
+    margin-bottom: 5px;  /* Space between heading and dropdown */
+    font-size: 1.1rem;  /* Slightly larger font size for the heading */
+    font-weight: bold;
+}
+
+/* Style for the select dropdown */
+select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;  /* Ensures it takes the full width of the container */
+}
+
+#color{
+    margin-bottom:10px;
+}
+#size{
+    margin-bottom:10px;
+}
